@@ -92,13 +92,9 @@ export const NewProposalList = ({
       <Tabs
         tabList={[
           {
-            label: "Basics",
+            label: "",
             Component: () => <ProposalList proposals={basicProposals} />,
-          },
-          {
-            label: "Advanced",
-            Component: () => <ProposalList proposals={advancedProposals} />,
-          },
+          }
         ]}
       />
     </ListContainer>

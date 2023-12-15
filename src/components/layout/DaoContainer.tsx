@@ -50,18 +50,18 @@ const Dao = ({
 
   const navLinks = useMemo(() => {
     let baseLinks = [
-      { label: "Home", href: `/` },
+      { label: "Home", href: `https://plurality.moda.gov.tw/` },
       { label: "DAO", href: `/${routePath}` },
-      { label: "Safes", href: `/${routePath}/safes` },
-      { label: "Proposals", href: `/${routePath}/proposals` },
-      { label: "Members", href: `/${routePath}/members` },
-      { label: "Settings", href: `/${routePath}/settings` },
+      { label: "多簽金庫", href: `/${routePath}/safes` },
+      { label: "提案", href: `/${routePath}/proposals` },
+      { label: "成員", href: `/${routePath}/members` },
+      { label: "設定", href: `/${routePath}/settings` },
     ];
 
     return address
       ? [
           ...baseLinks,
-          { label: "Profile", href: `/${routePath}/member/${address}` },
+          { label: "資料", href: `/${routePath}/member/${address}` },
         ]
       : baseLinks;
   }, [daoChain, daoId, address]);

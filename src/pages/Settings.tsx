@@ -9,7 +9,7 @@ export const Settings = () => {
   const { dao } = useDaoData();
 
   return (
-    <SingleColumnLayout title="Settings">
+    <SingleColumnLayout title="設定">
       {dao && (
         <DaoSettings
           daoChain={daoChain as keyof Keychain}

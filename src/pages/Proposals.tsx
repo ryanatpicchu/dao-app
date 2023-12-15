@@ -22,14 +22,14 @@ export const Proposals = () => {
   return (
     <SingleColumnLayout>
       <ProposalList
-        header="Proposals"
+        header="提案"
         allowLinks={true}
         rightActionEl={
           <Dialog>
             <DialogTrigger asChild>
-              <Button IconLeft={BsPlusLg}>New Proposal</Button>
+              <Button IconLeft={BsPlusLg}>新增提案</Button>
             </DialogTrigger>
-            <DialogContent title="Choose Proposal Type">
+            <DialogContent title="選擇提案類型">
               <NewProposalList
                 basicProposals={basicProposals}
                 advancedProposals={advancedProposals}

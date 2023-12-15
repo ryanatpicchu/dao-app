@@ -21,7 +21,7 @@ export const HeaderAvatar = ({ name, imgUrl, address }: HAvatar) => {
   return (
     <DaoNavContainer>
       <DaoProfileAvatar image={imgUrl} address={address} />
-      <H4>{name}</H4>
+      <H4>開拓DAO</H4>
     </DaoNavContainer>
   );
 };
