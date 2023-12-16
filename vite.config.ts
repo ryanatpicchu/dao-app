@@ -36,6 +36,7 @@ export default ({ mode }) => {
 
     build: {
       target: ["es2020"],
+      chunkSizeWarningLimit:5000
     },
   });
 };
