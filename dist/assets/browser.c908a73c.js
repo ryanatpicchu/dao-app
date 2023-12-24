@@ -1,1 +1,16 @@
-var e=null;typeof WebSocket<"u"?e=WebSocket:typeof MozWebSocket<"u"?e=MozWebSocket:typeof global<"u"?e=global.WebSocket||global.MozWebSocket:typeof window<"u"?e=window.WebSocket||window.MozWebSocket:typeof self<"u"&&(e=self.WebSocket||self.MozWebSocket);const o=e;export{o as default};
+var ws = null;
+if (typeof WebSocket !== "undefined") {
+  ws = WebSocket;
+} else if (typeof MozWebSocket !== "undefined") {
+  ws = MozWebSocket;
+} else if (typeof global !== "undefined") {
+  ws = global.WebSocket || global.MozWebSocket;
+} else if (typeof window !== "undefined") {
+  ws = window.WebSocket || window.MozWebSocket;
+} else if (typeof self !== "undefined") {
+  ws = self.WebSocket || self.MozWebSocket;
+}
+const ws$1 = ws;
+export {
+  ws$1 as default
+};
