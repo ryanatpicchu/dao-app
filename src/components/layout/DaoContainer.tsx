@@ -50,7 +50,7 @@ const Dao = ({
 
   const navLinks = useMemo(() => {
     let baseLinks = [
-      { label: "Home", href: `https://plurality.moda.gov.tw/` },
+      { label: "Home", href: `https://www.plurality.moda.gov.tw/` },
       { label: "DAO", href: `/${routePath}` },
       { label: "多簽金庫", href: `/${routePath}/safes` },
       { label: "提案", href: `/${routePath}/proposals` },
