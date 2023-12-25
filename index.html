@@ -8,8 +8,8 @@
     <meta http-equiv="Content-Security-Policy" content="
     default-src 'self'  api.thegraph.com; 
     img-src 'self' cdn.discordapp.com explorer-api.walletconnect.com ipfs.io data:; 
-    style-src 'self' 'unsafe-inline' fonts.googleapis.com data: ;
-    script-src 'self' 'unsafe-inline' data: ;  
+    style-src 'self' 'nonce-cm1vaw==' fonts.googleapis.com data: ;
+    script-src 'self' 'nonce-cm1vaw==' data: ;  
     font-src 'self' fonts.gstatic.com; 
     connect-src 'self' *.eth.rpc.rivet.cloud *.goerli.rpc.rivet.cloud *.safe.global relay.walletconnect.com wss://relay.walletconnect.com boredapeyachtclub.com relay.walletconnect.org api.thegraph.com explorer-api.walletconnect.com ipfs.io ;
     frame-src verify.walletconnect.com;
@@ -17,9 +17,9 @@
   </head>
   <body>
     <div id="root"></div>
-    <script>
+    <script >
       window.global = window;
     </script>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx" ></script>
   </body>
 </html>

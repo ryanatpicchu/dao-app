@@ -5,7 +5,30 @@ export default ({ mode }) => {
   Object.assign(process.env, loadEnv(mode, process.cwd()));
 
   return defineConfig({
-    plugins: [react()],
+    plugins: [
+      react(),
+      
+    {
+      name: 'add-nonce-script-attr',
+      enforce: 'post',
+      transformIndexHtml(html) {
+        return html
+          .replace(new RegExp('<script', 'g'), `<script nonce="cm1vaw=="`)
+          .replace(new RegExp('<style', 'g'), `<style nonce="cm1vaw=="`)
+          .replace(new RegExp('<link', 'g'), `<link nonce="cm1vaw=="`)
+      }
+    },
+    {
+        name: "html-inject-data-preload-attr",
+        enforce: "post",
+        transformIndexHtml(html) {
+            const regex = /<(link|style|script)/gi;
+            const replacement = '<$1 data-preload="true"';
+
+            return html.replace(regex, replacement);
+        },
+    }
+    ],
     define: {
       "process.env": {
         NX_RIVET_KEY: process.env.VITE_RIVET_KEY,
