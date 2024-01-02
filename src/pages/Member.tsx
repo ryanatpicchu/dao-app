@@ -52,7 +52,7 @@ export const Member = () => {
   if (!daoChain || !daoId) return <ParLg>DAO Not Found</ParLg>;
 
   return (
-    <SingleColumnLayout title="Member Profile">
+    <SingleColumnLayout title="成員資訊">
       {!member && isFetching && <Loading size={12} />}
       {!member && isFetched && <ParLg>Member Not Found</ParLg>}
       {member && (
@@ -66,14 +66,14 @@ export const Member = () => {
               variant="outline"
               fullWidth={isMobile}
             >
-              MEMBERS
+              成員一覽
             </ButtonRouterLink>
             <Button
               IconLeft={BsShareFill}
               onClick={handleOnClick}
               fullWidth={isMobile}
             >
-              SHARE PROFILE
+              分享資訊
             </Button>
           </ButtonsContainer>
           <MemberProfileCard
